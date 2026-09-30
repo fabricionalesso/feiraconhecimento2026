@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="theme-color" content="#f2efe7">
+	<link rel="stylesheet" href="t1.css">
+	<title>Quiz | A evolução do armazenamento</title>
+</head>
+
+<body>
+	<main class="quiz-shell">
+		<header class="topbar">
+			<a class="back-link" href="t.html" aria-label="Voltar à apresentação">← <span>Voltar</span></a>
+			<p class="topic-label">HISTÓRIA DA TECNOLOGIA</p>
+			<span class="topbar-mark" aria-hidden="true" id="topbar-progress">Apresentação</span>
+		</header>
+
+		<section class="quiz-panel" id="registration-panel" style="text-align: center; margin: auto; padding: 40px 20px;">
+			<h1 style="margin-bottom: 10px;">Identifique-se</h1>
+			<p style="margin-bottom: 25px; font-size: 16px; color: #ccc;">Insira seu nome para começar o quiz e salvar seu resultado.</p>
+			<input type="text" id="username-input" placeholder="Seu Nome..." style="text-align: center; padding: 12px 15px; font-size: 16px; border-radius: 8px; border: 2px solid #8bd68b; background: #222; color: white; width: 100%; max-width: 300px; margin-bottom: 25px; outline: none;">
+			<br>
+			<button class="next-button" id="start-quiz-button" type="button">
+				Iniciar Quiz <span aria-hidden="true">→</span>
+			</button>
+		</section>
+
+		<section class="quiz-panel" id="quiz-content" aria-live="polite" hidden>
+			<div class="intro-row">
+				<div>
+					<p class="eyebrow">DESAFIO RÁPIDO</p>
+					<h1>A memória<br>da humanidade<span>.</span></h1>
+				</div>
+				<div class="score-stamp" aria-label="Pontuação atual">
+					<span id="score">0</span>
+					<small>PONTOS</small>
+				</div>
+			</div>
+
+			<div class="progress-area">
+				<div class="progress-copy">
+					<span id="question-count">PERGUNTA 1 DE 8</span>
+					<span id="progress-percent">13%</span>
+				</div>
+				<div class="progress-track" role="progressbar" aria-label="Progresso do quiz" aria-valuemin="0" aria-valuemax="8" aria-valuenow="1">
+					<span id="progress-fill"></span>
+				</div>
+			</div>
+
+			<div class="question-area">
+				<p class="question-kicker" id="question-topic">ORIGENS</p>
+				<h2 id="question-text"></h2>
+				<div class="answer-list" id="answer-list"></div>
+				<div class="feedback" id="feedback" hidden role="status">
+					<strong id="feedback-title"></strong>
+					<p id="feedback-text"></p>
+				</div>
+			</div>
+
+			<div class="quiz-footer">
+				<span id="hint">Escolha uma resposta para continuar.</span>
+				<button class="next-button" id="next-button" type="button" disabled>
+					Próxima <span aria-hidden="true">→</span>
+				</button>
+			</div>
+		</section>
+
+	</main>
+
+	<script src="t1.js"></script>
+</body>
+
+</html>
