@@ -1,0 +1,147 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    
+    font-family: Arial, sans-serif;
+    background-image: url('img/fundo2.png');
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    min-height: 100vh;
+    text-align: center;
+}
+
+#titulo {
+    color: #ffffff;
+    font-size: 80px;
+    -webkit-text-stroke: 3px black;
+    text-shadow: 4px 4px 4px rgba(0, 0, 0, 0.5);
+    padding: 20px;
+    margin-top: 50px;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-weight: bold;
+}
+
+#guia {
+    height: 80px;
+    width: 340px;
+    background-color: #4CAF50;
+    color: white;
+    border: 3px solid #ffffff;
+    font-size: 24px;
+    border-radius: 5px;
+    padding: 15px 30px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    margin: 20px;
+    cursor: pointer;
+}
+
+#quiz {
+    height: 80px;
+    width: 340px;
+    background-color: orange;
+    color: white;
+    border: 3px solid #ffffff;
+    font-size: 24px;
+    border-radius: 5px;
+    padding: 15px 30px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 20px;
+    cursor: pointer;
+    margin-left: 0px;
+}
+
+
+/*Animações de Transição de Telas*/
+
+
+html,
+body {
+    overflow-x: hidden;
+}
+
+@keyframes slideInFromLeft {
+    0% {
+        transform: translateX(-100%);
+        opacity: 0;
+    }
+
+    100% {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+@keyframes slideOutToLeft {
+    0% {
+        transform: translateX(0);
+        opacity: 1;
+    }
+
+    100% {
+        transform: translateX(-100%);
+        opacity: 0;
+    }
+}
+
+@keyframes slideInFromRight {
+    0% {
+        transform: translateX(100%);
+        opacity: 0;
+    }
+
+    100% {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+@keyframes slideOutToRight {
+    0% {
+        transform: translateX(0);
+        opacity: 1;
+    }
+
+    100% {
+        transform: translateX(100%);
+        opacity: 0;
+    }
+}
+
+body.page-enter-left {
+    animation: slideInFromLeft 0.35s cubic-bezier(0.25, 1, 0.5, 1) forwards;
+}
+
+body.page-enter-right {
+    animation: slideInFromRight 0.35s cubic-bezier(0.25, 1, 0.5, 1) forwards;
+}
+
+body.page-exit-left {
+    animation: slideOutToLeft 0.35s cubic-bezier(0.25, 1, 0.5, 1) forwards;
+}
+
+body.page-exit-right {
+    animation: slideOutToRight 0.35s cubic-bezier(0.25, 1, 0.5, 1) forwards;
+}
+
+@media (prefers-reduced-motion: reduce) {
+
+    body.page-enter-left,
+    body.page-enter-right,
+    body.page-exit-left,
+    body.page-exit-right {
+        animation: none !important;
+    }
+}
